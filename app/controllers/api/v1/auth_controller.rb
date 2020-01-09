@@ -2,11 +2,11 @@ class Api::V1::AuthController < ApplicationController
 
     def login 
         @user = User.find_by(username: params[:username])
-        if @user && @user.authenticate(params{:password})
+        if @user && @user.authenticate(params[:password])
             token = issue_token(@user)
             render json: {id: @user.id, username: @user.username, jwt: token}
         else 
-            render json: {error: "User doesn't exist"}, status: 401    
+            render json: {error: "Invalid username or password"}   
         end
     end
 

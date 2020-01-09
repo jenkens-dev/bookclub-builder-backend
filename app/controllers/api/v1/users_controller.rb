@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
     def create 
+        byebug
         @user = User.new(username: params[:username], password: params[:password])
         if @user.valid?
             @user.save
