@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2020_01_09_001108) do
   create_table "bookclub_users", force: :cascade do |t|
     t.integer "bookclub_id"
     t.integer "user_id"
+    t.integer "is_admin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -50,8 +51,7 @@ ActiveRecord::Schema.define(version: 2020_01_09_001108) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "profile_picture"
-    t.string "is_admin"
+    t.string "profile_picture", default: "https://i.imgur.com/VfFU5d8.jpg"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
