@@ -1,7 +1,6 @@
 class Api::V1::UsersController < ApplicationController
     def create 
-        byebug
-        @user = User.new(username: params[:username], password: params[:password])
+        @user = User.new(username: params[:username], password: params[:password], profile_picture: params[:profile_picture])
         if @user.valid?
             @user.save
             token = issue_token(@user)
