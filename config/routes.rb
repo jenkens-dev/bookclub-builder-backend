@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :users
       resources :books
       resources :bookclubs
+      resources :bookclub_users
       post '/login', to: 'auth#login'
       get '/current_user', to: 'auth#current_user'
     end
