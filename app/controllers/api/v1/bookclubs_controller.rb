@@ -12,6 +12,12 @@ class Api::V1::BookclubsController < ApplicationController
     ]
     end
 
+    def create
+        @bookclub = Bookclub.create(name: params[:name], description: params[:description], picture: params[:picture])
+        @bookclub_user = BookclubUser.create(bookclub_id: @bookclub.id, user_id: params[:id], is_admin: params[:id])
+        render json: @bookclub
+    end
+
     def update 
         @bookclub = Bookclub.find(params[:id])
         @bookclub.update(name: params[:name], description: params[:description], picture: params[:picture])
