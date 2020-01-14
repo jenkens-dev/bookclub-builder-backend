@@ -9,6 +9,7 @@ class Api::V1::BookclubUsersController < ApplicationController
     def destroy 
         @bookclub_user = BookclubUser.find_by(bookclub_id: params[:bookclub_id], user_id: params[:user_id])
         if @bookclub_user 
+            @bookclub_user.delete
             render json: {message: 'Left Bookclub'}
         else 
             render json: {error: 'Something went wrong.'}
