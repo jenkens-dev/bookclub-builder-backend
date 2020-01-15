@@ -9,4 +9,12 @@ class Api::V1::UsersController < ApplicationController
             render json: {error: 'Something went wrong.'}
         end
     end
+
+    def mybookclubs 
+        @user = User.find(params[:id])
+        if @user 
+            render json: @user.bookclubs, include: [:users]
+        end
+    end
+
 end
