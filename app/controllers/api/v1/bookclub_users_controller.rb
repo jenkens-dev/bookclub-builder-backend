@@ -4,8 +4,6 @@ class Api::V1::BookclubUsersController < ApplicationController
         render json: @bookclub_user
     end
 
-
-
     def destroy 
         @bookclub_user = BookclubUser.find_by(bookclub_id: params[:bookclub_id], user_id: params[:user_id])
         if @bookclub_user 
