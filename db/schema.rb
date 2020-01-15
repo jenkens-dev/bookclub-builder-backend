@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_09_001108) do
+ActiveRecord::Schema.define(version: 2020_01_15_010805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookclub_books", force: :cascade do |t|
     t.integer "bookclub_id"
-    t.integer "book_id"
-    t.boolean "is_completed"
+    t.integer "google_book_id"
+    t.boolean "is_completed", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -44,6 +44,22 @@ ActiveRecord::Schema.define(version: 2020_01_09_001108) do
     t.string "author"
     t.string "thumbnail"
     t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "poll_options", force: :cascade do |t|
+    t.integer "google_book_id"
+    t.integer "poll_id"
+    t.integer "votes"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "polls", force: :cascade do |t|
+    t.string "name"
+    t.integer "bookclub_id"
+    t.boolean "active", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

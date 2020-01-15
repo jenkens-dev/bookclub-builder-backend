@@ -38,29 +38,29 @@ bookclub_user = BookclubUser.create(bookclub_id: bookclub7.id, user_id: matt.id,
 
 
 
-bookclub_book = BookclubBook.create(bookclub_id: bookclub1.id, book_id: Book.first.id, is_completed: false)
-bookclub_book = BookclubBook.create(bookclub_id: bookclub1.id, book_id: Book.last.id, is_completed: true)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub1.id, book_id: Book.first.id, is_completed: false)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub1.id, book_id: Book.last.id, is_completed: true)
 
 
-bookclub_book = BookclubBook.create(bookclub_id: bookclub2.id, book_id: Book.first.id, is_completed: false)
-bookclub_book = BookclubBook.create(bookclub_id: bookclub2.id, book_id: Book.last.id, is_completed: true)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub2.id, book_id: Book.first.id, is_completed: false)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub2.id, book_id: Book.last.id, is_completed: true)
 
 
-bookclub_book = BookclubBook.create(bookclub_id: bookclub3.id, book_id: Book.first.id, is_completed: false)
-bookclub_book = BookclubBook.create(bookclub_id: bookclub3.id, book_id: Book.last.id, is_completed: true)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub3.id, book_id: Book.first.id, is_completed: false)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub3.id, book_id: Book.last.id, is_completed: true)
 
 
-bookclub_book = BookclubBook.create(bookclub_id: bookclub4.id, book_id: Book.first.id, is_completed: false)
-bookclub_book = BookclubBook.create(bookclub_id: bookclub4.id, book_id: Book.last.id, is_completed: true)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub4.id, book_id: Book.first.id, is_completed: false)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub4.id, book_id: Book.last.id, is_completed: true)
 
 
-bookclub_book = BookclubBook.create(bookclub_id: bookclub5.id, book_id: Book.first.id, is_completed: false)
-bookclub_book = BookclubBook.create(bookclub_id: bookclub5.id, book_id: Book.last.id, is_completed: true)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub5.id, book_id: Book.first.id, is_completed: false)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub5.id, book_id: Book.last.id, is_completed: true)
 
 
-bookclub_book = BookclubBook.create(bookclub_id: bookclub6.id, book_id: Book.first.id, is_completed: false)
-bookclub_book = BookclubBook.create(bookclub_id: bookclub6.id, book_id: Book.last.id, is_completed: true)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub6.id, book_id: Book.first.id, is_completed: false)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub6.id, book_id: Book.last.id, is_completed: true)
 
 
-bookclub_book = BookclubBook.create(bookclub_id: bookclub7.id, book_id: Book.first.id, is_completed: false)
-bookclub_book = BookclubBook.create(bookclub_id: bookclub7.id, book_id: Book.last.id, is_completed: true)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub7.id, book_id: Book.first.id, is_completed: false)
+# bookclub_book = BookclubBook.create(bookclub_id: bookclub7.id, book_id: Book.last.id, is_completed: true)
