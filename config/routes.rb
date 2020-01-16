@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :bookclubs
       resources :bookclub_users
       resources :polls
+      post '/polls/:id/options', to: 'polls#create_option'
       post '/login', to: 'auth#login'
       get '/current_user', to: 'auth#current_user'
       get '/:id/bookclubs', to: 'users#mybookclubs'
