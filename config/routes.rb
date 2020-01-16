@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  resources :bookclub_users
   namespace :api do
     namespace :v1 do
       resources :users
       resources :books
       resources :bookclubs
       resources :bookclub_users
+      resources :polls
+      post '/polls/:id/options', to: 'polls#create_option'
       post '/login', to: 'auth#login'
       get '/current_user', to: 'auth#current_user'
       get '/:id/bookclubs', to: 'users#mybookclubs'
