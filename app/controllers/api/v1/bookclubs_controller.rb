@@ -6,10 +6,13 @@ class Api::V1::BookclubsController < ApplicationController
 
     def show 
         @bookclub = Bookclub.find(params[:id])
-        render :json => @bookclub, :include => [
-            :users,
-            :bookclub_users => {:only => :is_admin}
-    ]
+        @poll = @bookclub.get_active_poll
+        render json: {
+            poll: @poll,
+            bookclub: @bookclub.as_json(
+                include: {users: {except: [:created_at, :updated_at]}, bookclub_users: {only: [:is_admin]}}
+            )
+        }
     end
 
     def create
