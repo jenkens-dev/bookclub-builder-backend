@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_15_010805) do
+ActiveRecord::Schema.define(version: 2020_01_17_172317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2020_01_15_010805) do
   end
 
   create_table "poll_options", force: :cascade do |t|
-    t.integer "google_book_id"
+    t.string "google_book_id"
     t.integer "poll_id"
     t.integer "votes"
     t.datetime "created_at", precision: 6, null: false

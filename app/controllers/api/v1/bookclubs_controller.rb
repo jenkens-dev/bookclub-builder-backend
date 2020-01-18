@@ -8,7 +8,7 @@ class Api::V1::BookclubsController < ApplicationController
         @bookclub = Bookclub.find(params[:id])
         @poll = @bookclub.get_active_poll
         render json: {
-            poll: @poll,
+            poll: @poll.as_json(include: {poll_options: {except: [:created_at, :updated_at]}}),
             bookclub: @bookclub.as_json(
                 include: {users: {except: [:created_at, :updated_at]}, bookclub_users: {only: [:is_admin]}}
             )
