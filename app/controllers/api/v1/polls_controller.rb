@@ -12,7 +12,8 @@ class Api::V1::PollsController < ApplicationController
     def increment_vote 
         @poll_option = PollOption.find(params[:id])
         @poll_option.update(votes: params[:increasedVote])
-        byebug
+        @poll = Poll.find(@poll_option.poll_id)
+        render json: @poll, include: [:poll_options]
     end
 end
 
