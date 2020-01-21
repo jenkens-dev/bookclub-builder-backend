@@ -4,6 +4,12 @@ class Api::V1::PollsController < ApplicationController
         render json: @poll
     end
 
+    def update 
+        @poll = Poll.find(params[:id])
+        @poll.update(active: params[:active])
+        render json: @poll
+    end
+
     def create_option 
         @poll_option = PollOption.create(google_book_id: params[:google_book_id], poll_id: params[:poll_id], votes: params[:votes])
         render json: @poll_option
