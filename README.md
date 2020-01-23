@@ -1,24 +1,35 @@
-# README
+# Bookclub Builder - Frontend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Frontend
 
-Things you may want to cover:
+## Motivation
 
-* Ruby version
+Bookclub Builder's goal is to encourage people to read more and unite book lovers. I wanted a simple website that allowed me to create a bookclub and decide on which books to read through poll. [This](https://github.com/Taljjaa/bookclub-builder-backend) is a link to the backend repository
 
-* System dependencies
+## Technology Used
 
-* Configuration
+-  Ruby on Rails
+-  AWS S3 image hosting
 
-* Database creation
+## Features
 
-* Database initialization
+-  Users can sign up and login
+-  Users can join a bookclub or leave a bookclub
+   -  As a member a user can vote on the current poll
+-  Users can create a bookclub
+   -  If you create the bookclub you're automatically set as the admin
+      -  As the admin you can create a poll and archive the poll
+      -  And Edit the bookclub
 
-* How to run the test suite
+## Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+clone the repo and open the file on your local machine.
+run `bundle install` and then `rails s` to begin the server.
 
-* Deployment instructions
+## Contributing
 
-* ...
+Contributions are welcome! Feel free to submit a pull request
+
+## License
+
+This project is licensed under [MIT](https://choosealicense.com/licenses/mit/)
