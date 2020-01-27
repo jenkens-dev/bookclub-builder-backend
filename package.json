@@ -1,0 +1,19 @@
+{
+   "name": "bookclub-builder",
+   "version": "1.0.0",
+   "description": "Create your own bookclub or join existing bookclubs!",
+   "main": "index.js",
+   "repository": "git@github.com:Taljjaa/bookclub-builder-backend.git",
+   "author": "Taljjaa <jenken131@gmail.com>",
+   "license": "MIT",
+   "scripts": {
+      "build": "cd client && yarn install && yarn build && cd ..",
+      "deploy": "cp -a client/build/. public/",
+      "postinstall": "yarn build && yarn deploy && echo 'Client built!'"
+   },
+   "engines": {
+      "yarn": "1.19.1",
+      "npm": "6.12.1",
+      "node": "12.13.1"
+   }
+}
